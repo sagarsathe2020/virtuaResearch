@@ -1,0 +1,43 @@
+<div class="container">
+    <form >
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="name" [(ngModel)]="name" placeholder="Enter name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Age</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="age" [(ngModel)]="age" placeholder="Enter Age..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Mobile</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="mobile" [(ngModel)]="mobile" placeholder="Enter mobile..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Email</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="email" [(ngModel)]="email" placeholder="Enter email..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25"></div>
+        <div class="col-75">
+          <input type="button" class="margin-top" (click)="cancel();" value="Cancel">
+          <input type="button" class="margin-top margin-left" (click)="submit()" value="Submit">
+        </div>
+      </div>
+    </form>
+  </div>

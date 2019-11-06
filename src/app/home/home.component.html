@@ -1,0 +1,5 @@
+<app-top-menu [showAddButton]="!showAddUpdateDeveloperForm" (addDeveloperClicked)="showAddUpdateDeveloperForm = $event;"></app-top-menu>
+
+<app-table-view *ngIf="!showAddUpdateDeveloperForm" (updateClicked)="showAddUpdateDeveloperForm = true;isUpdate = true;selectedDeveloper = $event;" #tableView></app-table-view>
+
+<app-add-update-popup *ngIf="showAddUpdateDeveloperForm" [isUpdate]="isUpdate" [developer]="selectedDeveloper" (cancelClicked)="showAddUpdateDeveloperForm = false;" (onSubmit)="showAddUpdateDeveloperForm = false;isUpdate = false;"></app-add-update-popup>

@@ -1,0 +1,25 @@
+<h2 *ngIf="developers && developers.length == 0">There is no data available. Please add data.</h2>
+<table *ngIf="developers && developers.length > 0">
+  <thead>
+    <tr>
+      <th i18n>Sr. No.</th>
+      <th i18n>Name</th>
+      <th i18n>Age</th>
+      <th i18n>Mobile</th>
+      <th i18n>Email</th>
+      <th i18n>Edit</th>
+      <th i18n>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let developer of developers; let srNo = index">
+      <td>{{srNo + 1}}</td>
+      <td>{{developer.name}}</td>
+      <td>{{developer.age}}</td>
+      <td>{{developer.mobile}}</td>
+      <td>{{developer.email}}</td>
+      <td><a (click)="updateDeveloper(developer);"><i class="fa fa-edit"></i></a></td>
+      <td><a (click)="deleteDeveloper(developer);"><i class="fa fa-trash"></i></a></td>
+    </tr>
+  </tbody>
+</table>
